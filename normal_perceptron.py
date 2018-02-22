@@ -6,7 +6,7 @@ weights=[]
 dataset=None
 label=None
 ## MAIN CONTROLLER
-
+accr =[]
 def main_part():
 
     l_rate = input("Enter The Learning Rate : ")
@@ -18,7 +18,7 @@ def main_part():
             print "#############inposhere_dataset###############"
             dataset,label=rd2.fileread('inosphere_dataset')
 
-        epoch_list = [1,2,3,10,15,20,25,30,35,40,45,50]## EPOCH LIST
+        epoch_list = [1,2,3,5,10,15,20,25,30,35,40,45,50]## EPOCH LIST
         for c_epoch in epoch_list:
             weights=[]
             n=len(dataset)/10
@@ -51,7 +51,9 @@ def main_part():
                 accuracy = calculate_accuracy(act,pred)
                 acc.append(accuracy)
             print "At Epoch : "+(str)(c_epoch)+" Accuracy : "+(str)((float)(sum(acc))/(float)(len(acc)))
+            accr.append((float)(sum(acc))/(float)(len(acc)))
         print "#############################################"
+    return accr
 
         #print(weights)
 
