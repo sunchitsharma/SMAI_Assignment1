@@ -56,8 +56,8 @@ def main_func():
     pl1 = zip(*mat_1)[0]; d1x2 = zip(*mat_1)[1]
     pl2 = zip(*mat_2)[0]; d2x2 = zip(*mat_2)[1]
 
-    c1 = plt.scatter(pl1, d1x2, c = "red", label = "C1")
-    c2 = plt.scatter(pl2, d2x2, c = "green", label = "C2")
+    #c1 = plt.scatter(pl1, d1x2, c = "red", label = "C1")
+    #c2 = plt.scatter(pl2, d2x2, c = "green", label = "C2")
 
     points = []
     dp_1 = np.dot(mat_1, weights)
@@ -98,7 +98,7 @@ def main_func():
     # PLOTTING CLASSIFIER
     x = np.array(range(-2, 5))
     y = eval("x * (-w[0] / w[1]) - (w[2] / w[1])")
-    classifier = plt.plot(x, y, label = 'classifier')
+    classifier = plt.plot(x, y, label = 'LDA classifier')
 
 
 #main_func()

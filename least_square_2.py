@@ -33,12 +33,12 @@ def main_func():
         x2.append(i[0])
         y2.append(i[1])
 
-    plot1= plt.scatter(x1,y1,c="blue",label="FIRST")
-    plot2= plt.scatter(x2,y2,c="red",label="SECOND")
+    plot1= plt.scatter(x1,y1,c="red",label="FIRST")
+    plot2= plt.scatter(x2,y2,c="green",label="SECOND")
     w=np.transpose(w)
     x=np.array(range(-2,4))
     y=eval("x*(-w[0][0]/w[0][1])-(w[0][2]/w[0][1])")
-    classifier=plt.plot(x,y,label="classifier")
+    classifier=plt.plot(x,y,label="LMS classifier")
 
 ## RUN CODE #########
 #main_func()

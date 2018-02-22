@@ -4,4 +4,5 @@ import matplotlib.pyplot as plt
 
 LD.main_func()
 ls.main_func()
+plt.legend(loc = 'center left')
 plt.show()
