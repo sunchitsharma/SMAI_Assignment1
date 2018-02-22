@@ -89,6 +89,7 @@ def calculate_accuracy(actual,predicted):
 ## PREDICTION ALGORITHM
 
 def predict(row,weights):
+
     activation = weights[0]
     for i in range(len(row)-1):
         activation+=weights[i+1]*row[i]
@@ -96,6 +97,7 @@ def predict(row,weights):
         return 1.0
     else:
         return 0.0
+
 
 ## TRAINING THE PERCEPTRON
 
