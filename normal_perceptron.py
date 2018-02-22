@@ -127,7 +127,7 @@ def preceptron(train,test,lrate,n_epoch):
 
 
 #################### RUNNER #####################
-main_part()
+#main_part()
 #################################################
 
 
